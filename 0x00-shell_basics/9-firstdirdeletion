@@ -1,0 +1,9 @@
+#!/bin/bash
+directory="/tmp/my_first_directory"
+if [ -d "$directory" ]; then
+    rm -r "$directory"
+    echo "Directory $directory deleted."
+else
+    echo "Directory $directory does not exist."
+fi
+

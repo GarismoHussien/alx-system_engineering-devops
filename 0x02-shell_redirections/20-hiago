@@ -1,2 +1,2 @@
 #!/bin/bash
-read -r input && printf "%s\n" "${input//c/}" > output.txt
+tr -d "Cc"

@@ -24,9 +24,9 @@ The server is accessible at [bdbnb.site](http://bdbnb.site).
   that configures a new Ubuntu machine with Nginx.
   * Nginx listens on port 80.
   * When querying Nginx at its root `/` with a `curl` GET request,
-  it returns a page containing the string `Holberton School`.
-  # For fedora linux 
-  # fedora linux 
+#it returns a page containing the string `Holberton School`.
+# For fedora linux 
+# fedora linux 
 # sudo sh -c 'echo "Hello World!" > /usr/share/nginx/html/index.html'
 ##!/bin/bash
 

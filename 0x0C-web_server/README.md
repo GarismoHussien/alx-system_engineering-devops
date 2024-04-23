@@ -25,6 +25,33 @@ The server is accessible at [bdbnb.site](http://bdbnb.site).
   * Nginx listens on port 80.
   * When querying Nginx at its root `/` with a `curl` GET request,
   it returns a page containing the string `Holberton School`.
+  # For fedora linux 
+  # fedora linux 
+# sudo sh -c 'echo "Hello World!" > /usr/share/nginx/html/index.html'
+##!/bin/bash
+
+# Update package index and install nginx
+dnf install -y nginx
+
+# Ensure nginx is listening on port 80
+sed -i 's/^listen\s*\(.*\)/listen 80;/g' /etc/nginx/nginx.conf
+
+# Restart nginx without using systemctl
+systemctl restart nginx
+
+# Create index.html with "Hello World!"
+echo 'Hello World!' > /usr/share/nginx/html/index.html
+
+# Verify nginx is running
+ps aux | grep nginx | grep -v grep
+
+# Testing curl request to localhost
+curl -s localhost
+
+# Additional testing curl request from local machine
+# Replace "your_server_ip" with the actual IP address of your server
+curl -sI your_server_ip
+curl -s your_server_ip
 
 * **2. Setup a domain name**
   * [2-setup_a_domain_name](./2-setup_a_domain_name): A text file containing

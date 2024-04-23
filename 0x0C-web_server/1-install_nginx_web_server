@@ -6,31 +6,3 @@ apt-get -y install nginx
 ufw allow 'Nginx HTTP'
 echo 'Hello World!' > /var/www/html/index.nginx-debian.html
 service nginx start
-
-
-# fedora linux 
-# sudo sh -c 'echo "Hello World!" > /usr/share/nginx/html/index.html'
-##!/bin/bash
-
-# Update package index and install nginx
-dnf install -y nginx
-
-# Ensure nginx is listening on port 80
-sed -i 's/^listen\s*\(.*\)/listen 80;/g' /etc/nginx/nginx.conf
-
-# Restart nginx without using systemctl
-systemctl restart nginx
-
-# Create index.html with "Hello World!"
-echo 'Hello World!' > /usr/share/nginx/html/index.html
-
-# Verify nginx is running
-ps aux | grep nginx | grep -v grep
-
-# Testing curl request to localhost
-curl -s localhost
-
-# Additional testing curl request from local machine
-# Replace "your_server_ip" with the actual IP address of your server
-curl -sI your_server_ip
-curl -s your_server_ip

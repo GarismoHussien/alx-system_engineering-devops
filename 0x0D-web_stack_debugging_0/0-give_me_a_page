@@ -3,3 +3,6 @@
 
 echo "ServerName localhost" | sudo tee -a /etc/apache2/apache2.conf
 sudo service apache2 start
+sudo touch /etc/httpd/httpd.conf
+echo "ServerName localhost" | sudo tee -a /etc/httpd/httpd.conf
+curl 0:8080
